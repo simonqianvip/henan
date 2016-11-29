@@ -4,15 +4,11 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
-import json
-import codecs
 import logging
-from scrapy import signals
-from twisted.enterprise import adbapi
-from datetime import datetime
+
 import MySQLdb
 import MySQLdb.cursors
-
+from twisted.enterprise import adbapi
 
 logger = logging.getLogger(__name__)
 class HenanPipeline(object):
